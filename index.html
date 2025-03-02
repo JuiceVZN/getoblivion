@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Executor Download</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <img src="Taxus.png" alt="Taxus Logo" class="logo fade-in">
+        <h1 class="fade-in">Roblox Executor Download</h1>
+        <div class="button-container">
+            <div class="card scale-up">
+                <h2>Free Version</h2>
+                <p>80% Success Rate</p>
+                <button class="button download" onclick="downloadFile('Free Taxus.zip')">Download Now</button>
+            </div>
+            <div class="card scale-up">
+                <h2>Premium Version</h2>
+                <p>100% Success Rate</p>
+                <button class="button coming-soon" disabled>Coming Soon</button>
+            </div>
+        </div>
+        <div class="footer slide-in">
+            <p>Stay tuned for updates and new features!</p>
+        </div>
+    </div>
+    
+    <script>
+        function downloadFile(filename) {
+            window.location.href = filename;
+        }
+        
+        $(document).ready(function(){
+            $(".fade-in").hide().fadeIn(2000);
+            $(".scale-up").css("transform", "scale(0.8)").animate({transform: "scale(1)"}, 500);
+            $(".slide-in").css("bottom", "-50px").animate({bottom: "0px"}, 1000);
+        });
+    </script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(50,50,50,0.6) 10%, rgba(0,0,0,0.9) 90%);
+            animation: backgroundMove 10s infinite alternate;
+            z-index: -1;
+        }
+        @keyframes backgroundMove {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 10px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .card {
+            background: linear-gradient(135deg, #444, #222);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+        }
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            transition: background 0.3s ease, transform 0.2s ease;
+            font-size: 14px;
+        }
+        .download {
+            background: #007bff;
+        }
+        .download:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+        .coming-soon {
+            background: #555;
+            cursor: not-allowed;
+        }
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            animation: pulse 3s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</body>
+</html>
