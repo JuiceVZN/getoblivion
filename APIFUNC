@@ -1,4 +1,53 @@
+--[[
+░█████╗░███████╗██╗░░██╗                       
+██╔══██╗╚════██║██║░██╔╝
+██║░░╚═╝░░███╔═╝█████═╝░
+██║░░██╗██╔══╝░░██╔═██╗░          
+╚█████╔╝███████╗██║░╚██╗
+░╚════╝░╚══════╝╚═╝░░╚═╝
 
+
+███╗░░██╗███████╗██╗░░░██╗██████╗░░█████╗░
+████╗░██║██╔════╝██║░░░██║██╔══██╗██╔══██╗
+██╔██╗██║█████╗░░██║░░░██║██████╔╝███████║
+██║╚████║██╔══╝░░██║░░░██║██╔══██╗██╔══██║
+██║░╚███║███████╗╚██████╔╝██║░░██║██║░░██║
+╚═╝░░╚══╝╚══════╝░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝
+
+
+
+░██████╗░█████╗░██╗░░░░░░█████╗░██████╗░
+██╔════╝██╔══██╗██║░░░░░██╔══██╗██╔══██╗
+╚█████╗░███████║██║░░░░░███████║██║░░██║
+░╚═══██╗██╔══██║██║░░░░░██╔══██║██║░░██║
+██████╔╝██║░░██║███████╗██║░░██║██████╔╝
+╚═════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═════╝░                
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠟⠉⠀⠙⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠇⠀⠀⠀⠀⠀⠹⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡟⠀⠀⠀⠀⠀⠀⠀⢹⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣁⣤⣤⡤⠤⠤⠤⢤⣼⣷⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡞⠉⠉⠀⢀⣀⣀⣀⣀⡀⠀⠀⠀⠙⢷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⡴⠒⢶⣄⣤⣀⣀⣀⡀⠀⠀⠀⣸⣧⠶⠞⠛⠉⠉⠉⠉⠉⠙⠛⠳⢦⣤⣼⠃⠀⠀⠀⠀⢀⣀⠀⢀⣀⡀⠀⠀⠀
+⠀⠀⢠⡟⠀⠀⠀⠉⠉⠙⠉⠉⢻⢀⣤⠞⠋⣁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠈⠙⢷⣄⠀⠀⢰⡟⠙⣿⠟⠉⠻⣆⠀⠀
+⠀⣠⠾⢷⡄⠀⠀⠀⠀⠀⠀⠀⣸⡟⠁⠀⢠⠋⢧⡀⠀⠀⠀⠀⠀⠀⠀⣰⠋⢳⡀⠀⠀⠙⣷⡴⠟⠃⠀⠀⠀⠀⢀⣿⠀⠀
+⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⣴⠟⠋⠁⠀⠀⠘⢂⣈⣁⠀⠀⠀⠀⠀⠀⠀⣋⣉⣛⢃⠀⠀⠀⣿⡄⠀⠀⠀⠀⠀⠀⠛⠛⢻⣄
+⠸⣧⣀⠀⠀⠀⠀⠀⠀⢠⣿⠀⠀⠀⠀⠀⢾⢻⣷⡟⢳⠀⠀⠀⠀⠀⣼⢻⣿⠟⡟⠀⠀⠀⢹⡷⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿
+⠀⢸⡃⠀⠀⠀⠀⠀⠀⠀⢹⣧⠖⠚⠒⢄⠘⢷⣤⡴⠟⣣⡤⠤⣤⣄⠿⢦⣥⡴⢣⠖⠉⠑⢺⡷⣦⡄⠀⠀⠀⠀⢀⣠⡾⠃
+⠀⠈⠛⣶⠆⠀⠀⠀⠀⠰⣿⡇⠀⠀⠀⢈⠀⠀⠀⡴⠋⠁⠀⠀⠀⠈⠻⣦⠀⠀⢦⠀⠀⠀⠀⣿⣟⠀⠀⠀⠀⠀⠀⠈⣿⠀
+⠀⠀⠀⢻⣄⣠⡀⠀⠀⢀⣾⠙⠦⠤⢤⣮⣤⣄⢰⠁⠀⠀⠀⠀⠀⠀⠀⢸⡆⢀⣈⣶⣤⠤⠊⠀⢹⡇⠀⠀⢀⣀⣠⡴⠟⠀
+⠀⠀⠀⠀⠈⠙⠳⠦⠶⠿⣇⠀⠀⠀⡞⣡⠀⠈⠻⡄⠀⠀⠀⠀⠀⠀⠀⢸⡷⠛⢱⣄⠹⡆⠀⠀⠈⣿⠶⠶⠛⠉⠉⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡄⠀⠀⣇⠘⢧⡀⠀⠳⣄⡀⠀⠀⠀⢀⣴⠏⠀⣠⠞⠁⢸⠇⠀⠀⢰⠏⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⡄⠀⠙⣦⡀⠻⢦⣀⠀⠉⠓⠒⠛⠉⢀⣠⠞⠁⠀⣰⠏⠀⠀⣠⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣆⠀⠈⠳⣤⡀⠈⠙⠓⠒⠒⠒⠚⠉⠀⢀⣴⠞⠁⠀⢀⣴⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⡀⠀⠙⠳⢤⣀⣀⣀⣀⣠⡴⠞⠋⠀⠀⣀⣴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠳⢦⣤⣀⣀⣉⠉⠁⣀⣀⣀⣤⡶⠞⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠛⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+]]
+-- DONT EVEN THINK ABOUT SKIDDING OKAY?
+-- vars
 getgenv().IS_SALAD_LOADED = false
 getgenv().shared = shared 
 local oldr = request 
@@ -25,7 +74,7 @@ local protectedr = {
 	StatusMessage = "OK",
 	Body = [[
 	{
-	"[ NovaAPI ]: Protected |  https://discord.gg/VttNgWDwzY"
+	"[ Neura/Czk ]: Protected | discord.gg/getczk"
 	}
 	]],
 	Headers = {}
@@ -377,7 +426,7 @@ function XenoBridge:InternalRequest(body, timeout)
 			warn(result, 2)
 			return
 		end
-		warn("[ NovaAPI Error ]: Unknown error", 2)
+		warn("[ Neura Error ]: Unknown error", 2)
 		return
 	end
 	local success = pcall(function()
@@ -404,9 +453,9 @@ function XenoBridge:InternalRequest(body, timeout)
 		end
 	end)
 	if success and result then
-		warn("[ NovaAPI Error ]: " .. tostring(result), 2)
+		warn("[ Neura Error ]: " .. tostring(result), 2)
 	end
-	error("[NovaAPI Error]: Unknown server error", 2)
+	error("[Neura Error]: Unknown server error", 2)
 end
 function XenoBridge:request(options)
 	local result = self:InternalRequest({
@@ -521,10 +570,10 @@ getgenv().require = function(scr) -- not mine
 				if game:GetObjects('rbxassetid://' .. scr)[1].Source ~= "" then 
 					return loadstring(game:GetObjects('rbxassetid://' .. scr)[1].Source)()
 				else 
-					warn("[ NovaAPI ]: Require failed: cant require a modulescript with no code")
+					warn("[ Neura ]: Require failed: cant require a modulescript with no code")
 				end
 			else 
-				warn("[ NovaAPI ]: Require failed: require asset id failed")
+				warn("[ Neura ]: Require failed: require asset id failed")
 			end
 		end
 		return
@@ -1249,7 +1298,7 @@ if not shared.vulnsm then
 		getfenv().game = nil
 		flags = flags or 0
 		writefile("messageboxargs.txt", string.format("%s\n%s\n%d", text, caption, flags)) 
-		warn("[ NovaAPI ] - Loading the messagebox, please wait a bit")
+		warn("[ Neura ] - Loading the messagebox, please wait a bit")
 		local fw = false 
 		while not fw do
 			if isfile("messageboxargs.txt") then
@@ -1264,7 +1313,7 @@ if not shared.vulnsm then
 		local skibidi = [[ 
 			@echo off
 			setlocal enabledelayedexpansion
-			powershell -Command "Write-Host '[ NovaAPI FUNCTIONS HANDLER ]' -ForegroundColor Blue"
+			powershell -Command "Write-Host '[ Neura FUNCTIONS HANDLER ]' -ForegroundColor Blue"
 			set fp=%APPDATA%\Salad 2.1\workspace\messageboxargs.txt
 			:waitforf
 			if not exist "!fp!" (
@@ -1461,49 +1510,49 @@ getgenv().salad.get_player_by_name = function(name)
 end
 getgenv().salad.get_hrp = function(player)
     player = player or game.Players.LocalPlayer
-    assert(player, "[ NovaAPI ]: Player is nil")
+    assert(player, "[ Neura ]: Player is nil")
     local character = player.Character
-    assert(character, "[ NovaAPI ]: Character not found for player")
+    assert(character, "[ Neura ]: Character not found for player")
     local hrp = character:FindFirstChild("HumanoidRootPart")
-    assert(hrp, "[ NovaAPI ]: HumanoidRootPart not found for player")
+    assert(hrp, "[ Neura ]: HumanoidRootPart not found for player")
     return hrp
 end
 getgenv().salad.teleport = function(trpos)
-    assert(trpos, "[ NovaAPI ]: Target position is nil")
+    assert(trpos, "[ Neura ]: Target position is nil")
     local root = getgenv().salad.get_hrp(game.Players.LocalPlayer)
-    assert(root, "[ NovaAPI ]: Player or RootPart not found")
+    assert(root, "[ Neura ]: Player or RootPart not found")
     root.CFrame = CFrame.new(trpos)
     return true
 end
 getgenv().salad.is_player_alive = function(player)
     player = player or game.Players.LocalPlayer
-    assert(player, "[ NovaAPI ]: Player is nil")
+    assert(player, "[ Neura ]: Player is nil")
     local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
-    assert(humanoid, "[ NovaAPI ]: Humanoid not found for player")
+    assert(humanoid, "[ Neura ]: Humanoid not found for player")
     return humanoid.Health > 0
 end
 getgenv().salad.teleport_to_player = function(targetn)
-    assert(targetn, "[ NovaAPI ]: Target player name is nil")
+    assert(targetn, "[ Neura ]: Target player name is nil")
     local targetplr = getgenv().salad.get_player_by_name(targetn)
-    assert(targetplr, "[ NovaAPI ]: Target player not found")
+    assert(targetplr, "[ Neura ]: Target player not found")
     local targetHRP = getgenv().salad.get_hrp(targetplr)
     local localHRP = getgenv().salad.get_hrp(game.Players.LocalPlayer)
-    assert(targetHRP, "[ NovaAPI ]: Target player does not have a HumanoidRootPart")
-    assert(localHRP, "[ NovaAPI ]: Local player does not have a HumanoidRootPart")
+    assert(targetHRP, "[ Neura ]: Target player does not have a HumanoidRootPart")
+    assert(localHRP, "[ Neura ]: Local player does not have a HumanoidRootPart")
     localHRP.CFrame = targetHRP.CFrame
     return true
 end
 getgenv().salad.get_distance = function(plr1, plr2)
-    assert(plr1, "[ NovaAPI ]: Player 1 name is nil")
-    assert(plr2, "[ NovaAPI ]: Player 2 name is nil")
+    assert(plr1, "[ Neura ]: Player 1 name is nil")
+    assert(plr2, "[ Neura ]: Player 2 name is nil")
     local player1 = getgenv().salad.get_player_by_name(plr1)
     local player2 = getgenv().salad.get_player_by_name(plr2)
-    assert(player1, "[ NovaAPI ]: Player 1 not found")
-    assert(player2, "[ NovaAPI ]: Player 2 not found")
+    assert(player1, "[ Neura ]: Player 1 not found")
+    assert(player2, "[ Neura ]: Player 2 not found")
     local hrp1 = getgenv().salad.get_hrp(player1)
     local hrp2 = getgenv().salad.get_hrp(player2)
-    assert(hrp1, "[ NovaAPI ]: Player 1 does not have a HumanoidRootPart")
-    assert(hrp2, "[ NovaAPI ]: Player 2 does not have a HumanoidRootPart")
+    assert(hrp1, "[ Neura ]: Player 1 does not have a HumanoidRootPart")
+    assert(hrp2, "[ Neura ]: Player 2 does not have a HumanoidRootPart")
     return (hrp1.Position - hrp2.Position).Magnitude
 end
 getgenv().salad.enable_internal = function()
@@ -1511,14 +1560,14 @@ getgenv().salad.enable_internal = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Insalad/internal/refs/heads/main/ee"))()
     end) 
     if not suc then 
-        error("[ NovaAPI ]: Failed to enable the internal UI: "..tostring(rec))
+        error("[ Neura ]: Failed to enable the internal UI: "..tostring(rec))
     end 
 end 
 getgenv().salad.disable_internal = function()
     if game:GetService("CoreGui"):FindFirstChild("Bar") then
         game:GetService("CoreGui"):FindFirstChild("Bar"):Destroy()
     else 
-        error("[ NovaAPI ]: Internal not found")
+        error("[ Neura ]: Internal not found")
     end 
 end 
 getgenv().salad.dex = function()
@@ -1534,7 +1583,7 @@ getgenv().salad.remote_spy = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Insalad/ApiShit/refs/heads/main/RemoteSpy"))()
     end) 
     if not suc then 
-        error("[ NovaAPI ]: Failed to load the remote spy: "..tostring(rec))
+        error("[ Neura ]: Failed to load the remote spy: "..tostring(rec))
     end 
 end 
 getgenv().salad.enable_httpspy = function()
@@ -1999,10 +2048,10 @@ end
 repeat task.wait()
     local s, r = pcall(function()
         game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = "[ NovaAPI ] [ 1.1 ]",
-            Text = "Powered by https://discord.gg/VttNgWDwzY",
+            Title = "[ NEURA ] [ 1.7 ]",
+            Text = "Powered by discord.gg/getczk",
             Duration = 5,
-            Icon = "rbxassetid://116947126834424"
+            Icon = "rbxassetid://106632826520461"
         })
     end)
     if s then
