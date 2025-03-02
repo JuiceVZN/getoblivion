@@ -74,7 +74,7 @@ local protectedr = {
 	StatusMessage = "OK",
 	Body = [[
 	{
-	"[ Neura/Czk ]: Protected | discord.gg/getczk"
+	"[ NovaAPI ]: Protected |  https://discord.gg/VttNgWDwzY"
 	}
 	]],
 	Headers = {}
@@ -2049,7 +2049,7 @@ repeat task.wait()
     local s, r = pcall(function()
         game:GetService("StarterGui"):SetCore("SendNotification", {
             Title = "[ Nova ] [ 1.7 ]",
-            Text = "Powered by NovaAPI",
+            Text = "Powered by https://discord.gg/VttNgWDwzY",
             Duration = 5,
             Icon = "rbxassetid://116947126834424"
         })
