@@ -453,7 +453,7 @@ function XenoBridge:InternalRequest(body, timeout)
 		end
 	end)
 	if success and result then
-		warn("[ NovaAPI Error ]: " .. tostring(result), 2)
+		warn("[ Nova Error ]: " .. tostring(result), 2)
 	end
 	error("[Nova Error]: Unknown server error", 2)
 end
