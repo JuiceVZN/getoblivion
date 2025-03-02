@@ -426,7 +426,7 @@ function XenoBridge:InternalRequest(body, timeout)
 			warn(result, 2)
 			return
 		end
-		warn("[ Neura Error ]: Unknown error", 2)
+		warn("[ NovaAPI Error ]: Unknown error", 2)
 		return
 	end
 	local success = pcall(function()
@@ -453,9 +453,9 @@ function XenoBridge:InternalRequest(body, timeout)
 		end
 	end)
 	if success and result then
-		warn("[ Neura Error ]: " .. tostring(result), 2)
+		warn("[ NovaAPI Error ]: " .. tostring(result), 2)
 	end
-	error("[Neura Error]: Unknown server error", 2)
+	error("[NovaAPI Error]: Unknown server error", 2)
 end
 function XenoBridge:request(options)
 	local result = self:InternalRequest({
@@ -690,7 +690,7 @@ getgenv().customprint = function(text: string, properties: table, imgid: rbxasse
     end
 end
 
-getgenv().printidentity = newcclosure(function() print("Current identity is 4") end)
+getgenv().printidentity = newcclosure(function() print("Current identity is 8") end)
 
 getgenv().join = function(placeID: number, jobID: string)
     game:GetService("TeleportService"):TeleportToPlaceInstance(placeID, jobID, getplayer())
