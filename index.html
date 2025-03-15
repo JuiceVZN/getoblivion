@@ -1,158 +1,449 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roblox Executor Download</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
-<body>
-    <div class="background-animation"></div>
-    <div class="container">
-        <img src="oblivion.png" alt="oblivion Logo" class="logo fade-in">
-        <h1 class="fade-in">Roblox Executor & API Download</h1>
-        <div class="button-container">
-            <div class="card scale-up">
-                <h2>Oblivion API</h2>
-                <p>94% Success Rate</p>
-                <button class="button download" onclick="downloadFile('OblivionAPI.zip')">Download Now</button>
-            </div>
-            <div class="card scale-up">
-                <h2>Oblivion</h2>
-                <p>Fast & High-Performance Executor</p>
-                <button class="button coming-soon" disabled>Coming Soon</button>
-            </div>
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oblivion API - Roblox Executor Development</title>
+  
+  <style>
+  :root {
+    --primary: #6c5ce7;
+    --secondary: #a29bfe;
+    --dark: #151519;
+    --darker: #0f0f12;
+    --light: #fff;
+    --gray: #2d2d35;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    background: var(--darker);
+    color: var(--light);
+    overflow-x: hidden;
+  }
+  
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  
+  .glow {
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    animation: glow 15s linear infinite;
+    pointer-events: none;
+    opacity: 0.1;
+  }
+  
+  @keyframes glow {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.5); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+  }
+  
+  .glow-1 {
+    background: radial-gradient(circle, var(--primary), transparent 70%);
+    top: 0;
+    left: 30%;
+  }
+  
+  .glow-2 {
+    background: radial-gradient(circle, var(--secondary), transparent 70%);
+    top: 50%;
+    left: 70%;
+  }
+  
+  .blob {
+    position: absolute;
+    filter: blur(80px);
+    opacity: 0.2;
+    z-index: 0;
+    animation: blobFloat 10s ease-in-out infinite;
+  }
+  
+  @keyframes blobFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(50px, -30px) scale(1.1); }
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary);
+  }
+  
+  .hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .highlight {
+    color: var(--primary);
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #a0a0a0;
+    margin-bottom: 2rem;
+  }
+  
+    .credits {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      color: #a0a0a0;
+      font-size: 0.9rem;
+    }
+    
+    .credits a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .credits a:hover {
+      color: var(--secondary);
+    }
+  
+  .cta-button {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: var(--light);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.2);
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.3);
+  }
+  
+  .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+  .feature-card {
+      background: var(--gray);
+      padding: 2rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+  
+ 
+  @keyframes borderGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+  
+  .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    
+  
+  .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+  .code-preview {
+    background: var(--dark);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .code-text {
+    font-family: 'Fira Code', monospace;
+    color: #a0a0a0;
+  }
+  
+  .matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.1;
+  }
+  
+  .floating-elements {
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    pointer-events: none;
+  }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  </head>
+  <body>
+  
+  <canvas class="matrix-bg" id="matrix"></canvas>
+  <div id="particles-js"></div>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  
+  <div class="blob" style="background: var(--primary); width: 500px; height: 500px; top: -200px; left: -200px;"></div>
+  <div class="blob" style="background: var(--secondary); width: 400px; height: 400px; bottom: -150px; right: -150px;"></div>
+  
+  <div class="container">
+    <nav>
+      <div class="logo">Oblivion API</div>
+      <div class="nav-links">
+        <a href="docs.html">Documentation</a>
+        <a href='/examples'>Examples</a>
+        <a href="support">Support</a>
+      </div>
+    </nav>
+  
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Build Powerful <span class="highlight">Roblox Executors</span> with Ease</h1>
+        <p class="description">
+          Oblivion API provides developers with a robust, secure, and easy-to-use platform for creating custom Roblox executors. Build your next project with confidence using our advanced API.
+        </p>
+        <a class='cta-button' href='/download'>Get Started Now</a>
+      </div>
+    </section>
+  
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
         </div>
-        <div class="footer slide-in">
-            <p>Stay tuned for updates and new features!</p>
+        <h3>Secure & Reliable</h3>
+        <p>Built with industry-standard security practices to keep your executors safe and stable.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-bolt"></i>
         </div>
+        <h3>High Performance</h3>
+        <p>Optimized for speed and efficiency, ensuring smooth execution of scripts.</p>
+      </div>
+    
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3>Easy Integration</h3>
+        <p>Simple to implement with comprehensive documentation and examples.</p>
+      </div>
     </div>
-    
-    <script>
-        function downloadFile(filename) {
-            window.location.href = filename;
-        }
-        
-        $(document).ready(function(){
-            $(".fade-in").hide().fadeIn(2000);
-            $(".scale-up").css("transform", "scale(0.8)").animate({transform: "scale(1)"}, 500);
-            $(".slide-in").css("bottom", "-50px").animate({bottom: "0px"}, 1000);
+<div class="credits">
+      <p>Injector: <span class="credit-highlight">Arcadia</span></p>
+      <p>Website Design: <span class="credit-highlight">Javalsta</span></p>
+    </div>
+
+
+   
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
         });
-    </script>
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            overflow: hidden;
-            position: relative;
+      });
+    });
+  
+    // Matrix rain effect
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+  
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%';
+    const fontSize = 10;
+    const columns = canvas.width / fontSize;
+    const drops = [];
+  
+    for (let i = 0; i < columns; i++) {
+      drops[i] = 1;
+    }
+  
+    function drawMatrix() {
+      ctx.fillStyle = 'rgba(15, 15, 18, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#6c5ce7';
+      ctx.font = fontSize + 'px monospace';
+  
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
         }
-        .background-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(50,50,50,0.6) 10%, rgba(0,0,0,0.9) 90%);
-            animation: backgroundMove 10s infinite alternate;
-            z-index: -1;
+        drops[i]++;
+      }
+    }
+  
+    setInterval(drawMatrix, 33);
+  
+    // Particles.js configuration
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: '#6c5ce7' },
+        shape: { type: 'circle' },
+        opacity: {
+          value: 0.5,
+          random: true,
+          animation: { enable: true, speed: 1, minimumValue: 0.1, sync: false }
+        },
+        size: {
+          value: 3,
+          random: true,
+          animation: { enable: true, speed: 4, minimumValue: 0.3, sync: false }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: '#a29bfe',
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: 'none',
+          random: false,
+          straight: false,
+          outModes: { default: 'bounce' },
+          attract: { enable: false, rotateX: 600, rotateY: 1200 }
         }
-        @keyframes backgroundMove {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.1);
-            }
+      },
+      interactivity: {
+        detectsOn: 'canvas',
+        events: {
+          onHover: { enable: true, mode: 'repulse' },
+          onClick: { enable: true, mode: 'push' },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 },
+          push: { particles_nb: 4 }
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            max-width: 800px;
-            margin: auto;
+      },
+      retina_detect: true
+    });
+  
+    // Parallax effect for blobs
+    window.addEventListener('mousemove', (e) => {
+      const blobs = document.querySelectorAll('.blob');
+      const mouseX = e.clientX / window.innerWidth;
+      const mouseY = e.clientY / window.innerHeight;
+  
+      blobs.forEach(blob => {
+        const speed = 30;
+        const x = (mouseX * speed);
+        const y = (mouseY * speed);
+        blob.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    });
+  
+    // Add animation to feature cards
+    const cards = document.querySelectorAll('.feature-card');
+    const observerOptions = {
+      threshold: 0.1
+    };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
         }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .logo {
-            width: 120px;
-            height: auto;
-            margin-bottom: 10px;
-            animation: bounce 2s infinite;
-        }
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-        .card {
-            background: linear-gradient(135deg, #444, #222);
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            width: 250px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-        }
-        .button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: white;
-            transition: background 0.3s ease, transform 0.2s ease;
-            font-size: 14px;
-        }
-        .download {
-            background: #007bff;
-        }
-        .download:hover {
-            background: #0056b3;
-            transform: scale(1.05);
-        }
-        .coming-soon {
-            background: #555;
-            cursor: not-allowed;
-        }
-        .footer {
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 14px;
-            animation: pulse 3s infinite;
-        }
-        @keyframes pulse {
-            0% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.6;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-    </style>
-</body>
-</html>
+      });
+    }, observerOptions);
+  
+    cards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'all 0.6s ease-out';
+      observer.observe(card);
+    });
+  
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  });
+  </script>
+  
+  </body></html>
