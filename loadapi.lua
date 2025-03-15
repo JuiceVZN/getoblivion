@@ -4,8 +4,8 @@ local StarterGui = game:GetService("StarterGui")
 repeat wait() until pcall(function() return StarterGui:SetCore end)
 
 StarterGui:SetCore("SendNotification", {
-    Title = "API Injected",
-    Text = "Your script has been successfully injected!",
+    Title = "Oblivion",
+    Text = "Oblivion successfully injected!",
     Duration = 5,
     Button1 = "OK"
 })
